@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher un message
-        run: echo "Exécution planifiée : $(date)"
+        run:  echo "Execution planifiee - $(date)"
