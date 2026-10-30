@@ -1,0 +1,13 @@
+name: Execution planifiee
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+    - cron: '30 8 * * 1-5'
+
+jobs:
+  afficher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher un message
+        run: echo "Execution planifiee - $(date)"
