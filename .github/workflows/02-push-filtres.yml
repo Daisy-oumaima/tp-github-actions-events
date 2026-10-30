@@ -1,0 +1,17 @@
+name: Push avec filtres
+
+on:
+  push:
+    branches:
+      - main
+      - 'dev/**'
+    paths:
+      - 'src/**'
+      - '**.md'
+
+jobs:
+  afficher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher un message
+        run: echo "Push filtré détecté sur ${{ github.ref_name }}"
