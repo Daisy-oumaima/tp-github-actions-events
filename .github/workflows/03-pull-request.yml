@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher un message
-        run: echo "PR #${{ github.event.pull_request.number }} - action ${{ github.event.action }}"
+        run: echo "PR ${{ github.event.pull_request.number }} - action ${{ github.event.action }}"
