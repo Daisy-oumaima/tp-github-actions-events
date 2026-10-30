@@ -1,4 +1,4 @@
-name: Déclenchement manuel
+name: Declenchement manuel
 
 on:
   workflow_dispatch:
@@ -7,15 +7,10 @@ on:
         description: 'Votre nom'
         required: true
         default: 'Etudiant'
-      environnement:
-        description: 'Environnement cible'
-        type: choice
-        options: [dev, test, prod]
-        default: dev
 
 jobs:
   afficher:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher un message
-        run: echo "Bonjour ${{ inputs.nom }}, environnement ${{ inputs.environnement }}"
+        run: echo "Bonjour ${{ inputs.nom }}"

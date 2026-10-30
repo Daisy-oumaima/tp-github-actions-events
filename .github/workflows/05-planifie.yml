@@ -1,13 +1,13 @@
-name: Exécution planifiée
+name: Execution planifiee
 
 on:
   schedule:
-    - cron: '*/5 * * * *'     # toutes les 5 minutes (pour le test)
-    - cron: '30 8 * * 1-5'    # du lundi au vendredi à 08h30 UTC
+    - cron: '*/5 * * * *'
+    - cron: '30 8 * * 1-5'
 
 jobs:
   afficher:
     runs-on: ubuntu-latest
     steps:
       - name: Afficher un message
-        run:  echo "Execution planifiee - $(date)"
+        run: echo "Execution planifiee - $(date)"
