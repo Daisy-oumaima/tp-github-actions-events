@@ -1,0 +1,14 @@
+name: Issues
+
+on:
+  issues:
+    types: [opened, closed, labeled]
+
+jobs:
+  afficher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Afficher un message
+        run: |
+          echo "Action - ${{ github.event.action }}"
+          echo "Titre - ${{ github.event.issue.title }}"
